@@ -1,9 +1,9 @@
-FROM cleanstart/jdk:26.0.1_p8-arm64
+FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
-COPY demo.java /app
+COPY demo.java .
 
-RUN java demo.java
+RUN javac demo.java
 
-CMD ["java","demo.java"]
+CMD ["java", "demo"]
